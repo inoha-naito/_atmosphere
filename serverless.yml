@@ -20,3 +20,9 @@ functions:
 
 plugins:
   - serverless-offline
+  - serverless-api-gateway-throttling
+
+custom:
+  apiGatewayThrottling:
+    maxRequestsPerSecond: 1
+    maxConcurrentRequests: 1
