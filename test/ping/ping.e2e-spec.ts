@@ -17,7 +17,8 @@ describe('PingController', () => {
   });
 
   test('GET /ping', () => {
-    return request(app.getHttpServer() as App)
+    return request
+      .default(app.getHttpServer() as App)
       .get('/ping')
       .expect(200)
       .expect('pong');
